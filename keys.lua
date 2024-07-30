@@ -48,7 +48,12 @@ local keys = {
     action = action.SplitHorizontal {
       domain = "CurrentPaneDomain"
     }
-  }
+  },
+  {
+    key = 'p',
+    mods = 'CMD',
+    action = wezterm.action.ActivateCommandPalette,
+  },
 }
 
 
