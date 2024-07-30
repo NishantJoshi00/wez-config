@@ -1,22 +1,12 @@
-local wezterm = require("wezterm")
-local colors = require("oldworld")
-
-local function tab_title(tab_info)
-  local title = tab_info.tab_title
-  if title and #title > 0 then
-    return title
-  end
-  return tab_info.active_pane.title
-end
-
-local symbol_map = {
-  left = '',
-  right = ''
-}
+local wezterm = require "wezterm";
+local colors = require "themes.oldworld";
 
 wezterm.on(
   'format-tab-title',
   function(tab, tabs, panes, config, hover, max_width)
+    local symbol_map = require("utils").symbol_map
+    local tab_title = require("utils").tab_title
+
     local edge_background = colors.bg
     local background = colors.bg_dark
     local foreground = colors.fg
