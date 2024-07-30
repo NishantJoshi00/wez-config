@@ -1,5 +1,4 @@
 local wezterm = require("wezterm")
-
 local colors = require("oldworld")
 
 local function tab_title(tab_info)
@@ -11,7 +10,7 @@ local function tab_title(tab_info)
 end
 
 local symbol_map = {
-  left = ' ',
+  left = '',
   right = ''
 }
 
@@ -33,7 +32,6 @@ wezterm.on(
     local edge_foreground = background
 
     local title = tab_title(tab)
-
 
     title = wezterm.truncate_right(title, max_width - 5)
 
