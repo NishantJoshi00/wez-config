@@ -33,9 +33,13 @@ wezterm.on(
 
     local title = tab_title(tab)
 
-    title = wezterm.truncate_right(title, max_width - 5)
+    title = wezterm.truncate_right(title, max_width - 2)
+    title = wezterm.truncate_left(title, max_width - 2)
 
     return {
+      { Background = { Color = colors.bg_dark } },
+      { Foreground = { Color = colors.fg } },
+      { Text = (tab.tab_id == tabs[1].tab_id) and " " .. wezterm.nerdfonts.cod_terminal_bash .. " " .. #tabs .. " " or "" },
       { Background = { Color = edge_foreground } },
       { Foreground = { Color = edge_background } },
       { Text = (tab.is_active or hover) and symbol_map.left or " " },
