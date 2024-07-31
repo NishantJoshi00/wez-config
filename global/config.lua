@@ -14,7 +14,7 @@ return function(config)
   config.window_background_opacity = 0.9
   config.cursor_blink_rate = 8
   config.initial_cols = 120
-  config.font_size = 12
+  config.font_size = 14
   config.keys = keys
 
   config.colors = colors

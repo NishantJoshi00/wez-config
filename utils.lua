@@ -1,3 +1,5 @@
+local wezterm = require 'wezterm'
+
 local function tab_title(tab_info)
   local title = tab_info.tab_title
   if title and #title > 0 then
@@ -11,6 +13,93 @@ local symbol_map = {
   right = ''
 }
 
+local language_map = {
+  ["lua"] = {
+    icon = wezterm.nerdfonts.seti_lua,
+    name = "Lua"
+  },
+  ["rs"] = {
+    icon = wezterm.nerdfonts.seti_rust,
+    name = "Rust"
+  },
+  ["sh"] = {
+    icon = wezterm.nerdfonts.seti_bash,
+    name = "Bash"
+  },
+  ["zsh"] = {
+    icon = wezterm.nerdfonts.seti_bash,
+    name = "Zsh"
+  },
+  ["bash"] = {
+    icon = wezterm.nerdfonts.seti_bash,
+    name = "Bash"
+  },
+  ["fish"] = {
+    icon = wezterm.nerdfonts.seti_fish,
+    name = "Fish"
+  },
+  ["python"] = {
+    icon = wezterm.nerdfonts.seti_python,
+    name = "Python"
+  },
+  ["py"] = {
+    icon = wezterm.nerdfonts.seti_python,
+    name = "Python"
+  },
+  ["py3"] = {
+    icon = wezterm.nerdfonts.seti_python,
+    name = "Python"
+  },
+  ["py2"] = {
+    icon = wezterm.nerdfonts.seti_python,
+    name = "Python"
+  },
+  ["python3"] = {
+    icon = wezterm.nerdfonts.seti_python,
+    name = "Python"
+  },
+  ["python2"] = {
+    icon = wezterm.nerdfonts.seti_python,
+    name = "Python"
+  },
+  ["js"] = {
+    icon = wezterm.nerdfonts.seti_javascript,
+    name = "JavaScript"
+  },
+  ["ts"] = {
+    icon = wezterm.nerdfonts.seti_typescript,
+    name = "TypeScript"
+  },
+  ["tsx"] = {
+    icon = wezterm.nerdfonts.seti_typescript,
+    name = "TypeScript"
+  },
+  ["go"] = {
+    icon = wezterm.nerdfonts.seti_go,
+    name = "Go"
+  },
+  ["c"] = {
+    icon = wezterm.nerdfonts.seti_c,
+    name = "C"
+  },
+  ["cpp"] = {
+    icon = wezterm.nerdfonts.seti_cpp,
+    name = "C++"
+  },
+  ["h"] = {
+    icon = wezterm.nerdfonts.seti_c,
+    name = "C"
+  },
+  ["md"] = {
+    icon = wezterm.nerdfonts.seti_markdown,
+    name = "Markdown"
+  },
+  ["zig"] = {
+    icon = wezterm.nerdfonts.seti_zig,
+    name = "Zig"
+  }
+}
+
 local function join(left, right)
   local result = {}
   for k, v in pairs(left) do result[k] = v end
@@ -22,4 +111,5 @@ return {
   tab_title = tab_title,
   symbol_map = symbol_map,
   join = join,
+  language_map = language_map
 }
