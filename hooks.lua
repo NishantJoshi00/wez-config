@@ -45,13 +45,10 @@ wezterm.on('update-right-status', function(window, pane)
 
   local filename = ""
 
-  -- check if title ends with "NVIM"
   if title:sub(-4) == "NVIM" then
-    -- split by space and get the first part
     title = title:match("%S+")
     filename = title
 
-    -- split on dot and get the last part
     title = title:match("[^.]+$")
   end
 

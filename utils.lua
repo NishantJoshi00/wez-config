@@ -38,27 +38,7 @@ local language_map = {
     icon = wezterm.nerdfonts.seti_fish,
     name = "Fish"
   },
-  ["python"] = {
-    icon = wezterm.nerdfonts.seti_python,
-    name = "Python"
-  },
   ["py"] = {
-    icon = wezterm.nerdfonts.seti_python,
-    name = "Python"
-  },
-  ["py3"] = {
-    icon = wezterm.nerdfonts.seti_python,
-    name = "Python"
-  },
-  ["py2"] = {
-    icon = wezterm.nerdfonts.seti_python,
-    name = "Python"
-  },
-  ["python3"] = {
-    icon = wezterm.nerdfonts.seti_python,
-    name = "Python"
-  },
-  ["python2"] = {
     icon = wezterm.nerdfonts.seti_python,
     name = "Python"
   },
