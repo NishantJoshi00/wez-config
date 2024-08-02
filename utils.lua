@@ -77,7 +77,12 @@ local language_map = {
   ["zig"] = {
     icon = wezterm.nerdfonts.seti_zig,
     name = "Zig"
+  },
+  ["yaml"] = {
+    icon = wezterm.nerdfonts.seti_yaml,
+    name = "Yaml"
   }
+
 }
 
 local function join(left, right)

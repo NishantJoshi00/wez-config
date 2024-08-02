@@ -3,6 +3,11 @@ local action = wezterm.action
 
 local keys = {
   {
+    key = 'p',
+    mods = 'OPT',
+    action = wezterm.action.DisableDefaultAssignment
+  },
+  {
     key = "f",
     mods = 'CTRL|CMD',
     action = action.ToggleFullScreen,
@@ -54,6 +59,11 @@ local keys = {
     mods = 'CMD',
     action = wezterm.action.ActivateCommandPalette,
   },
+  {
+    key = 'p',
+    mods = 'OPT',
+    action = wezterm.action.DisableDefaultAssignment
+  }
 }
 
 

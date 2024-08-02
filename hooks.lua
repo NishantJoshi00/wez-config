@@ -54,12 +54,14 @@ wezterm.on('update-right-status', function(window, pane)
 
   local language = language_map[title]
 
-  if language then
+  if language ~= nil then
     title = filename .. " " .. language.icon
   else
     title = ""
   end
 
-  window:set_left_status(wezterm.nerdfonts.cod_terminal_bash .. " " .. #pane:window():tabs() .. " ")
+  local tabs = window:mux_window():tabs()
+
+  window:set_left_status(wezterm.nerdfonts.cod_terminal_bash .. " " .. #tabs .. " ")
   window:set_right_status(title .. " ")
 end)
