@@ -4,7 +4,7 @@ local colors = require "themes.colors"
 
 return function(config)
   config.font = wezterm.font_with_fallback {
-    { family = "Geist Mono",         weight = "Regular" },
+    { family = "Geist Mono",         weight = "Medium" },
     { family = "SFMono Nerd Font",   weight = "Medium" },
     { family = "Monaspace Neon Var", weight = "Medium" },
   }
