@@ -4,5 +4,7 @@ local utils = require 'utils'
 return function(config)
   config.keys = utils.join(config.keys, require("system.mac.keys"))
 
+  config.tab_bar_at_bottom = false
+
   return config
 end

@@ -63,7 +63,37 @@ local keys = {
     key = 'p',
     mods = 'OPT',
     action = wezterm.action.DisableDefaultAssignment
-  }
+  },
+  {
+    key = ';',
+    mods = 'CMD',
+    action = wezterm.action.ActivateCopyMode
+  },
+  {
+    key = 'f',
+    mods = 'CMD|SHIFT',
+    action = wezterm.action.QuickSelect
+  },
+  {
+    key = "h",
+    mods = "CMD|SHIFT",
+    action = wezterm.action.ActivatePaneDirection "Left"
+  },
+  {
+    key = "j",
+    mods = "CMD|SHIFT",
+    action = wezterm.action.ActivatePaneDirection "Down"
+  },
+  {
+    key = "k",
+    mods = "CMD|SHIFT",
+    action = wezterm.action.ActivatePaneDirection "Up"
+  },
+  {
+    key = "l",
+    mods = "CMD|SHIFT",
+    action = wezterm.action.ActivatePaneDirection "Right"
+  },
 }
 
 
