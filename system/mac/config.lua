@@ -9,5 +9,7 @@ return function(config)
 
   config.native_macos_fullscreen_mode = true
 
+  config.initial_cols = 120
+
   return config
 end
