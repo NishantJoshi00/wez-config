@@ -9,9 +9,6 @@ local function tab_title(tab_info)
 end
 
 local symbol_map = {
-  -- left = '',
-  -- right = ''
-
   right = "",
   left = ""
 
@@ -90,11 +87,18 @@ local language_map = {
 
 }
 
+--- Join two tables
+--- @param left table|nil
+--- @param right table|nil
+--- @return table
 local function join(left, right)
-  if (left == nil) then
+  if (left == nil and right == nil) then
+    return {}
+  end
+  if (left == nil and right ~= nil) then
     return right
   end
-  if (right == nil) then
+  if (right == nil and left ~= nil) then
     return left
   end
 

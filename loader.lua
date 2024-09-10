@@ -1,5 +1,8 @@
 local utils = require "utils"
 
+--- Lazy load the configuration for the current system
+--- @param relative_path string
+--- @return fun(config: table): table
 local helper = function(relative_path)
   return function(config)
     require(relative_path .. ".hooks")

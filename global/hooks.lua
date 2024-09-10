@@ -47,7 +47,6 @@ wezterm.on('update-right-status', function(window, pane)
 
   if title:sub(-4) == "NVIM" then
     title = title:match("%S+")
-    filename = title
 
     title = title:match("[^.]+$")
   end
@@ -55,7 +54,7 @@ wezterm.on('update-right-status', function(window, pane)
   local language = language_map[title]
 
   if language ~= nil then
-    title = filename .. " " .. language.icon
+    title = language.icon
   else
     title = ""
   end
