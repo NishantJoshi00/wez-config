@@ -6,6 +6,7 @@ if wezterm.config_builder then
 end
 
 config = require("loader")["global"](config)
+
 config = require("loader")[wezterm.target_triple](config)
 
 
