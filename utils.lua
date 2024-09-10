@@ -12,8 +12,10 @@ local symbol_map = {
   -- left = '',
   -- right = ''
 
-  left = "",
-  right = "",
+  right = "",
+  left = ""
+
+
 }
 
 local language_map = {
