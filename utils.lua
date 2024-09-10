@@ -91,6 +91,13 @@ local language_map = {
 }
 
 local function join(left, right)
+  if (left == nil) then
+    return right
+  end
+  if (right == nil) then
+    return left
+  end
+
   local result = {}
   for k, v in pairs(left) do result[k] = v end
   for k, v in pairs(right) do result[k] = v end

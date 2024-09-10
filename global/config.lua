@@ -1,10 +1,7 @@
 local wezterm = require "wezterm"
-local keys = require "global.keys"
 local colors = require "themes.colors"
 
 return function(config)
-  require "global.hooks"
-
   config.font = wezterm.font_with_fallback {
     { family = "Geist Mono",         weight = "Regular" },
     { family = "SFMono Nerd Font",   weight = "Medium" },
@@ -14,9 +11,7 @@ return function(config)
   config.window_decorations = "RESIZE"
   config.default_cursor_style = "SteadyBar"
   config.window_background_opacity = 0.9
-  -- config.cursor_blink_rate = 300
   config.font_size = 14
-  config.keys = keys
 
   config.colors = colors
 
