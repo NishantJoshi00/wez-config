@@ -11,7 +11,6 @@ return function(config)
   config.window_decorations = "RESIZE"
   config.default_cursor_style = "SteadyBar"
   config.window_background_opacity = 0.9
-  config.font_size = 14
 
   config.colors = colors
 
@@ -21,8 +20,6 @@ return function(config)
 
   config.max_fps = 75
 
-
-  config.dpi = 144.0
 
   config.window_padding = {
     top = 0,
