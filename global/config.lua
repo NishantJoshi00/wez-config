@@ -5,7 +5,7 @@ return function(config)
   config.font = wezterm.font_with_fallback {
     { family = "Geist Mono",         weight = "Regular" },
     { family = "SFMono Nerd Font",   weight = "Medium" },
-    { family = "Monaspace Neon Var", weight = "Medium" },
+    { family = "Monaspace Neon Var", weight = "Bold" },
   }
 
   config.window_decorations = "RESIZE"
@@ -19,7 +19,6 @@ return function(config)
   config.show_new_tab_button_in_tab_bar = false
 
   config.max_fps = 75
-
 
   config.window_padding = {
     top = 0,
