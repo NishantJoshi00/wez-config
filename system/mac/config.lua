@@ -9,7 +9,5 @@ return function(config)
 
   config.native_macos_fullscreen_mode = true
 
-  config.dpi = 144.0
-
   return config
 end
