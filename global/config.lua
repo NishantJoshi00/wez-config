@@ -11,7 +11,6 @@ return function(config)
   config.window_decorations = "RESIZE"
   config.default_cursor_style = "SteadyBar"
   config.window_background_opacity = 0.9
-  config.font_size = 14
 
   config.colors = colors
 
@@ -27,5 +26,11 @@ return function(config)
     bottom = 0,
     right = 0,
   }
+
+  config.quick_select_patterns = {
+    -- filename
+    "[\\w./]+:\\d+:\\d+"
+  }
+
   return config
 end
