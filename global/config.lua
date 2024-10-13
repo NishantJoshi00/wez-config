@@ -26,5 +26,11 @@ return function(config)
     bottom = 0,
     right = 0,
   }
+
+  config.quick_select_patterns = {
+    -- filename
+    "[\\w./]+:\\d+:\\d+"
+  }
+
   return config
 end
