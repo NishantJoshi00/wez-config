@@ -1,10 +1,10 @@
 local colors = {
   foreground = "#c9c7cd",
-  background = "#131314",
+  background = "#161617",
   cursor_bg = "#c9c7cd",
-  cursor_fg = "#131314",
+  cursor_fg = "#161617",
   cursor_border = "#c9c7cd",
-  selection_bg = "#27272a",
+  selection_bg = "#2a2a2c",
   selection_fg = "#c9c7cd",
   ansi = {
     "#27272a",
@@ -18,16 +18,16 @@ local colors = {
   },
   brights = {
     "#353539",
-    "#f591b2",
-    "#9dc6ac",
-    "#f0c5a9",
-    "#a6b6e9",
-    "#ecaad6",
-    "#99c9ce",
+    "#ed96b3",
+    "#a7c8b3",
+    "#eac5ae",
+    "#a7b3dd",
+    "#e8b0d4",
+    "#97c0c4",
     "#3b3b3e",
   },
   tab_bar = {
-    background = "#131314",
+    background = "#161617",
   }
 }
 

@@ -1,5 +1,5 @@
 local wezterm = require "wezterm";
-local colors = require "themes.oldworld";
+local colors = require "themes.colors";
 
 wezterm.on(
   'format-tab-title',
@@ -7,16 +7,16 @@ wezterm.on(
     local symbol_map = require("utils").symbol_map
     local tab_title = require("utils").tab_title
 
-    local edge_background = colors.bg
-    local background = colors.bg_dark
-    local foreground = colors.fg
+    local edge_background = colors.background
+    local background = colors.background
+    local foreground = colors.foreground
 
     if tab.is_active then
-      background = colors.fg
-      foreground = colors.bg
+      background = colors.foreground
+      foreground = colors.background
     elseif hover then
-      background = colors.bg
-      foreground = colors.fg
+      background = colors.background
+      foreground = colors.foreground
     end
 
     local edge_foreground = background
@@ -39,28 +39,28 @@ wezterm.on(
     }
   end
 )
-wezterm.on('update-right-status', function(window, pane)
-  local language_map = require("utils").language_map
-  local title = pane:get_title()
+-- wezterm.on('update-right-status', function(window, pane)
+--   local language_map = require("utils").language_map
+--   local title = pane:get_title()
 
-  local filename = ""
+--   local filename = ""
 
-  if title:sub(-4) == "NVIM" then
-    title = title:match("%S+")
+--   if title:sub(-4) == "NVIM" then
+--     title = title:match("%S+")
 
-    title = title:match("[^.]+$")
-  end
+--     title = title:match("[^.]+$")
+--   end
 
-  local language = language_map[title]
+--   local language = language_map[title]
 
-  if language ~= nil then
-    title = language.icon
-  else
-    title = ""
-  end
+--   if language ~= nil then
+--     title = language.icon
+--   else
+--     title = ""
+--   end
 
-  local tabs = window:mux_window():tabs()
+--   local tabs = window:mux_window():tabs()
 
-  window:set_left_status(wezterm.nerdfonts.cod_terminal_bash .. " " .. #tabs .. " ")
-  window:set_right_status(title .. " ")
-end)
+--   window:set_left_status(wezterm.nerdfonts.cod_terminal_bash .. " " .. #tabs .. " ")
+--   window:set_right_status(title .. " ")
+-- end)
