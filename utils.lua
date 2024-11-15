@@ -9,10 +9,8 @@ local function tab_title(tab_info)
 end
 
 local symbol_map = {
-  right = "",
-  left = ""
-
-
+  right = "▐",
+  left = "▌",
 }
 
 local language_map = {
