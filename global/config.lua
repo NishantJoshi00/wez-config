@@ -17,6 +17,7 @@ return function(config)
   config.enable_tab_bar = true
   config.use_fancy_tab_bar = false
   config.show_new_tab_button_in_tab_bar = false
+  config.audible_bell = "Disabled"
 
   config.max_fps = 75
 
