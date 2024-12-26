@@ -3,10 +3,10 @@ local colors = require "themes.colors"
 
 return function(config)
     config.font = wezterm.font_with_fallback {
+        { family = "JetBrainsMono Nerd Font", weight = "Medium" },
         { family = "Geist Mono",              weight = "Medium" },
-        { family = "JetBrainsMono Nerd Font", weight = "Regular" },
         { family = "SFMono Nerd Font",        weight = "Medium" },
-        { family = "Monaspace Neon Var",      weight = "Bold" },
+        { family = "Monaspace Neon Var",      weight = "Medium" },
     }
 
     config.window_decorations = "RESIZE"
