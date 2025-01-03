@@ -47,7 +47,7 @@ local keys = {
     },
     {
         key = ';',
-        mods = 'CMD',
+        mods = 'CTRL|CMD',
         action = wezterm.action.ActivateCopyMode
     },
     {

@@ -36,17 +36,12 @@ This configuration provides a carefully crafted setup for WezTerm terminal emula
 
 The configuration will automatically load the appropriate settings based on your operating system. Key features include:
 
-1. Theme switching:
-
-   - Light theme (oldworld) during daytime (6:00-19:00)
-   - Dark theme (kanagawa-dragon) during nighttime
-
-2. System-specific settings:
+1. System-specific settings:
 
    - **macOS**: 16pt font size, native fullscreen support
    - **Linux**: 12pt font size, OpenGL frontend
 
-3. General settings:
+1. General settings:
    - Semi-transparent background (90% opacity)
    - Custom tab bar styling
    - 75 FPS limit
@@ -65,8 +60,6 @@ The configuration will automatically load the appropriate settings based on your
 
 ### Themes
 
-The configuration includes three themes:
+The configuration includes:
 
 - Kanagawa Dragon (Dark)
-- Oldworld (Light)
-- Catppuccin Mocha (Alternative)
