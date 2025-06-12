@@ -3,9 +3,9 @@ local colors = require "themes.colors"
 
 return function(config)
     config.font = wezterm.font_with_fallback {
-        { family = "JetBrainsMono Nerd Font", weight = "Medium" },
-        { family = "Intel One Mono",          weight = "Regular" },
+        { family = "JetBrains Mono", weight = "Medium" },
         { family = "Geist Mono",              weight = "Medium" },
+        { family = "Intel One Mono",          weight = "Regular" },
         { family = "Monaspace Neon Var",      weight = "Medium" },
     }
 
@@ -31,7 +31,9 @@ return function(config)
 
     config.quick_select_patterns = {
         -- filename
-        "[\\w./]+:\\d+:\\d+"
+        "[\\w./]+:\\d+:\\d+",
+        "[\\w.-]+@[\\w.-]+",
+
     }
 
     return config
