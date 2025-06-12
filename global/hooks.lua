@@ -11,40 +11,35 @@ wezterm.on(
         local proc = (pane.foreground_process_name or ""):gsub(".*[/\\]", "")
         local is_running = proc ~= "" and proc ~= "zsh" and proc ~= "bash"
 
-        local edge_background = colors.background
+        -- default
         local background = colors.background
         local foreground = colors.foreground
+        local title = tab_title(tab)
 
         if tab.is_active then
             background = colors.foreground
             foreground = colors.background
         elseif hover then
-            background = colors.unseen
-            foreground = colors.unseen_fg
+            background = colors.background
+            foreground = colors.ansi[2]
         elseif is_running then
-            background = colors.activity.busy  -- red from theme
-            foreground = colors.activity.busy_fg
-        end
-
-        local edge_foreground = background
-
-        local title = tab_title(tab)
-        if is_running then
-            title = title .. " [" .. proc .. "]"
+            background = colors.background
+            foreground = colors.brights[1]
+            title = "[" .. proc .. "]"
         end
 
         title = wezterm.truncate_right(title, max_width - 4)
         title = wezterm.truncate_left(title, max_width - 2)
 
         return {
-            { Background = { Color = edge_foreground } },
-            { Foreground = { Color = edge_background } },
+            { Background = { Color = colors.background } },
+            { Foreground = { Color = colors.background } },
             { Text = (tab.is_active or hover) and symbol_map.left or " " },
             { Background = { Color = background } },
             { Foreground = { Color = foreground } },
             { Text = " " .. title .. " " },
-            { Background = { Color = edge_background } },
-            { Foreground = { Color = edge_foreground } },
+            { Background = { Color = colors.background } },
+            { Foreground = { Color = colors.background } },
             { Text = (tab.is_active or hover) and symbol_map.left or " " },
         }
     end

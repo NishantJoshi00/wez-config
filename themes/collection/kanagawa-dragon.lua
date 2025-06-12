@@ -28,12 +28,6 @@ local colors = {
     },
     tab_bar = {
         background = "#181616",
-    },
-    activity = {
-        busy = "#c4746e",        -- red for running processes
-        unseen = "#c4b28a",      -- yellow for unseen output  
-        busy_fg = "#181616",     -- dark foreground for busy
-        unseen_fg = "#181616",   -- dark foreground for unseen
     }
 }
 
