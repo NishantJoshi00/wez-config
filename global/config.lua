@@ -2,7 +2,9 @@ local wezterm = require "wezterm"
 local colors = require "themes.colors"
 
 return function(config)
-    -- Font Configuration
+    -- ===================
+    -- FONT CONFIGURATION
+    -- ===================
     config.font = wezterm.font_with_fallback {
         { family = "JetBrains Mono", weight = "Medium" },
         { family = "Geist Mono",              weight = "Medium" },
@@ -10,27 +12,25 @@ return function(config)
         { family = "Monaspace Neon Var",      weight = "Medium" },
     }
 
-    -- Window Appearance
+    -- ===================
+    -- APPEARANCE & VISUAL
+    -- ===================
     config.window_decorations = "RESIZE"
     config.default_cursor_style = "SteadyBar"
     config.window_background_opacity = 0.9
+    config.colors = colors
 
-    -- Tab Bar Configuration
+    -- ===================
+    -- TAB BAR SETTINGS
+    -- ===================
     config.tab_bar_at_bottom = false
     config.enable_tab_bar = true
     config.use_fancy_tab_bar = false
     config.show_new_tab_button_in_tab_bar = false
 
-    -- Theme and Colors
-    config.colors = colors
-
-    -- Audio and Notifications
-    config.audible_bell = "Disabled"
-
-    -- Performance Settings
-    config.max_fps = 75
-
-    -- Window Layout
+    -- ===================
+    -- WINDOW LAYOUT
+    -- ===================
     config.window_padding = {
         top = 0,
         left = 0,
@@ -38,12 +38,22 @@ return function(config)
         right = 0,
     }
 
-    -- Text Selection and Search
-    config.quick_select_patterns = {
-        -- filename
-        "[\\w./]+:\\d+:\\d+",
-        "[\\w.-]+@[\\w.-]+",
+    -- ===================
+    -- PERFORMANCE
+    -- ===================
+    config.max_fps = 75
 
+    -- ===================
+    -- AUDIO & NOTIFICATIONS
+    -- ===================
+    config.audible_bell = "Disabled"
+
+    -- ===================
+    -- TEXT SELECTION & SEARCH
+    -- ===================
+    config.quick_select_patterns = {
+        "[\\w./]+:\\d+:\\d+",  -- filename with line:col
+        "[\\w.-]+@[\\w.-]+",   -- email addresses
     }
 
     return config

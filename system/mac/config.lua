@@ -3,17 +3,25 @@
 local utils = require 'utils'
 
 return function(config)
-  -- macOS Specific Features
+  -- ===================
+  -- MACOS PLATFORM FEATURES
+  -- ===================
   config.native_macos_fullscreen_mode = true
   
-  -- Input Method Settings
-  config.use_ime = false
+  -- ===================
+  -- FONT CONFIGURATION
+  -- ===================
+  config.font_size = 14
   
-  -- Window Dimensions
+  -- ===================
+  -- WINDOW SETTINGS
+  -- ===================
   config.initial_cols = 128
   
-  -- Font Configuration
-  config.font_size = 14
+  -- ===================
+  -- INPUT METHOD
+  -- ===================
+  config.use_ime = false
 
   return config
 end

@@ -2,16 +2,27 @@ local wezterm = require('wezterm');
 local action = wezterm.action
 
 local keys = {
+    -- ===================
+    -- KEY DISABLES
+    -- ===================
     {
         key = 'p',
         mods = 'OPT',
         action = wezterm.action.DisableDefaultAssignment
     },
+
+    -- ===================
+    -- WINDOW MANAGEMENT
+    -- ===================
     {
         key = "f",
         mods = 'CTRL|CMD',
         action = action.ToggleFullScreen,
     },
+
+    -- ===================
+    -- TERMINAL CONTROL
+    -- ===================
     {
         key = "k",
         mods = "CMD|SHIFT",
@@ -25,24 +36,29 @@ local keys = {
         mods = "CMD",
         action = action.ClearScrollback 'ScrollbackAndViewport',
     },
+
+    -- ===================
+    -- TAB MANAGEMENT
+    -- ===================
     {
         key = "i",
         mods = 'CMD|SHIFT',
         action = action.PromptInputLine {
             description = 'Enter new name for tab',
             action = wezterm.action_callback(function(window, pane, line)
-                -- line will be `nil` if they hit escape without entering anything
-                -- An empty string if they just hit enter
-                -- Or the actual line of text they wrote
                 if line then
                     window:active_tab():set_title(line)
                 end
             end),
         }
     },
+
+    -- ===================
+    -- INTERFACE ACTIONS
+    -- ===================
     {
         key = 'p',
-        mods = 'CMD',
+        mods = 'CMD|SHIFT',
         action = wezterm.action.ActivateCommandPalette,
     },
     {
@@ -56,7 +72,9 @@ local keys = {
         action = wezterm.action.QuickSelect
     },
 
-    -- create directioanl splits
+    -- ===================
+    -- PANE SPLITTING
+    -- ===================
     {
         key = "j",
         mods = "CMD|SHIFT",
@@ -102,7 +120,9 @@ local keys = {
         }
     },
 
-    -- change context
+    -- ===================
+    -- PANE NAVIGATION
+    -- ===================
     {
         key = "h",
         mods = "CMD",
@@ -114,7 +134,5 @@ local keys = {
         action = wezterm.action.ActivatePaneDirection "Next"
     },
 }
-
-
 
 return keys

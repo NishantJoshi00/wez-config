@@ -1,14 +1,20 @@
 local utils = require 'utils'
 
 return function(config)
-    -- Display Backend Configuration
+    -- ===================
+    -- DISPLAY BACKEND
+    -- ===================
     config.enable_wayland = false
     config.front_end = "WebGpu"
     
-    -- Font Configuration
+    -- ===================
+    -- FONT CONFIGURATION
+    -- ===================
     config.font_size = 14
     
-    -- Window Layout
+    -- ===================
+    -- WINDOW LAYOUT
+    -- ===================
     config.window_padding = {
         left = '1cell',
         right = '1cell',
@@ -17,7 +23,9 @@ return function(config)
     }
     config.adjust_window_size_when_changing_font_size = false
     
-    -- Input Method Settings
+    -- ===================
+    -- INPUT METHOD
+    -- ===================
     config.use_ime = false
 
     return config
