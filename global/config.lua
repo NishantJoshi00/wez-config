@@ -5,11 +5,12 @@ return function(config)
     -- ===================
     -- FONT CONFIGURATION
     -- ===================
+
     config.font = wezterm.font_with_fallback {
-        { family = "JetBrains Mono", weight = "Medium" },
-        { family = "Geist Mono",              weight = "Medium" },
-        { family = "Intel One Mono",          weight = "Regular" },
-        { family = "Monaspace Neon Var",      weight = "Medium" },
+        { family = "JetBrains Mono",     weight = "Regular" },
+        { family = "Monaspace Neon Var", weight = "Medium" },
+        { family = "Intel One Mono",     weight = "Regular" },
+        { family = "Geist Mono",         weight = "Medium" },
     }
 
     -- ===================
@@ -44,6 +45,14 @@ return function(config)
     config.max_fps = 75
 
     -- ===================
+    -- COMMAND PALETTE
+    -- ===================
+    config.command_palette_bg_color = colors.background
+    config.command_palette_fg_color = colors.foreground
+    config.command_palette_font_size = 14.0
+    config.command_palette_rows = 10
+
+    -- ===================
     -- AUDIO & NOTIFICATIONS
     -- ===================
     config.audible_bell = "Disabled"
@@ -52,8 +61,8 @@ return function(config)
     -- TEXT SELECTION & SEARCH
     -- ===================
     config.quick_select_patterns = {
-        "[\\w./]+:\\d+:\\d+",  -- filename with line:col
-        "[\\w.-]+@[\\w.-]+",   -- email addresses
+        "[\\w./]+:\\d+:\\d+", -- filename with line:col
+        "[\\w.-]+@[\\w.-]+",  -- email addresses
     }
 
     return config

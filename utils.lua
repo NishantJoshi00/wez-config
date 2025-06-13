@@ -106,9 +106,16 @@ local function join(left, right)
     return result
 end
 
+local ok, secrets = pcall(require, "secrets")
+if not ok then
+    secrets = nil
+end
+
+
 return {
     tab_title = tab_title,
     symbol_map = symbol_map,
     join = join,
-    language_map = language_map
+    language_map = language_map,
+    secrets = secrets,
 }

@@ -21,11 +21,14 @@ wezterm.on(
             foreground = colors.background
         elseif hover then
             background = colors.background
-            foreground = colors.ansi[2]
+            foreground = colors.ansi[7]
         elseif is_running then
             background = colors.background
             foreground = colors.brights[1]
             title = "[" .. proc .. "]"
+        elseif pane.has_unseen_output then
+            background = colors.background
+            foreground = colors.brights[7]
         end
 
         title = wezterm.truncate_right(title, max_width - 4)
