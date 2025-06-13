@@ -1,10 +1,35 @@
 local wezterm = require('wezterm');
 local action = wezterm.action
 
-return {
+local keys = {
+    -- ===================
+    -- KEY DISABLES  
+    -- ===================
+    {
+        key = 'p',
+        mods = 'OPT',
+        action = wezterm.action.DisableDefaultAssignment
+    },
+
+    -- ===================
+    -- WINDOW MANAGEMENT
+    -- ===================
+    {
+        key = "f",
+        mods = 'CTRL|OPT',
+        action = action.ToggleFullScreen,
+    },
     -- ===================
     -- TERMINAL CONTROL
     -- ===================
+    {
+        key = "k",
+        mods = "OPT|SHIFT",
+        action = action.Multiple {
+            action.ClearScrollback 'ScrollbackAndViewport',
+            action.SendKey { key = 'L', mods = 'CTRL' },
+        },
+    },
     {
         key = "k",
         mods = "OPT",
@@ -28,15 +53,27 @@ return {
     },
 
     -- ===================
-    -- PANE SPLITTING
+    -- INTERFACE ACTIONS
     -- ===================
     {
-        key = "l",
-        mods = 'OPT',
-        action = action.SplitHorizontal {
-            domain = "CurrentPaneDomain"
-        }
+        key = 'p',
+        mods = 'OPT|SHIFT',
+        action = wezterm.action.ActivateCommandPalette,
     },
+    {
+        key = ';',
+        mods = 'CTRL|OPT',
+        action = wezterm.action.ActivateCopyMode
+    },
+    {
+        key = 'f',
+        mods = 'OPT|SHIFT',
+        action = wezterm.action.QuickSelect
+    },
+
+    -- ===================
+    -- PANE SPLITTING
+    -- ===================
     {
         key = "j",
         mods = "OPT|SHIFT",
@@ -96,3 +133,5 @@ return {
         action = wezterm.action.ActivatePaneDirection "Next"
     },
 }
+
+return keys
