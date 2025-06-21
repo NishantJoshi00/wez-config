@@ -3,11 +3,11 @@ local action = wezterm.action
 
 local keys = {
     -- ===================
-    -- KEY DISABLES  
+    -- KEY DISABLES
     -- ===================
     {
         key = 'p',
-        mods = 'OPT',
+        mods = 'META',
         action = wezterm.action.DisableDefaultAssignment
     },
 
@@ -16,15 +16,16 @@ local keys = {
     -- ===================
     {
         key = "f",
-        mods = 'CTRL|OPT',
+        mods = 'CTRL|META',
         action = action.ToggleFullScreen,
     },
+
     -- ===================
     -- TERMINAL CONTROL
     -- ===================
     {
         key = "k",
-        mods = "OPT|SHIFT",
+        mods = "META|SHIFT",
         action = action.Multiple {
             action.ClearScrollback 'ScrollbackAndViewport',
             action.SendKey { key = 'L', mods = 'CTRL' },
@@ -32,7 +33,7 @@ local keys = {
     },
     {
         key = "k",
-        mods = "OPT",
+        mods = "META",
         action = action.ClearScrollback 'ScrollbackAndViewport',
     },
 
@@ -41,7 +42,7 @@ local keys = {
     -- ===================
     {
         key = "i",
-        mods = 'OPT|SHIFT',
+        mods = 'META|SHIFT',
         action = action.PromptInputLine {
             description = 'Enter new name for tab',
             action = wezterm.action_callback(function(window, pane, line)
@@ -57,17 +58,17 @@ local keys = {
     -- ===================
     {
         key = 'p',
-        mods = 'OPT|SHIFT',
+        mods = 'META|SHIFT',
         action = wezterm.action.ActivateCommandPalette,
     },
     {
         key = ';',
-        mods = 'CTRL|OPT',
+        mods = 'CTRL|META',
         action = wezterm.action.ActivateCopyMode
     },
     {
         key = 'f',
-        mods = 'OPT|SHIFT',
+        mods = 'META|SHIFT',
         action = wezterm.action.QuickSelect
     },
 
@@ -76,7 +77,7 @@ local keys = {
     -- ===================
     {
         key = "j",
-        mods = "OPT|SHIFT",
+        mods = "META|SHIFT",
         action = action.SplitPane {
             direction = 'Down',
             size = { Percent = 50 },
@@ -87,7 +88,7 @@ local keys = {
     },
     {
         key = "l",
-        mods = "OPT|SHIFT",
+        mods = "META|SHIFT",
         action = action.SplitPane {
             direction = 'Right',
             size = { Percent = 50 },
@@ -98,7 +99,7 @@ local keys = {
     },
     {
         key = "h",
-        mods = "OPT|SHIFT",
+        mods = "META|SHIFT",
         action = action.SplitPane {
             direction = 'Left',
             size = { Percent = 50 },
@@ -109,7 +110,7 @@ local keys = {
     },
     {
         key = "k",
-        mods = "OPT|SHIFT",
+        mods = "META|SHIFT",
         action = action.SplitPane {
             direction = 'Up',
             size = { Percent = 50 },
@@ -124,12 +125,12 @@ local keys = {
     -- ===================
     {
         key = "h",
-        mods = "OPT",
+        mods = "META",
         action = wezterm.action.ActivatePaneDirection "Prev"
     },
     {
         key = "l",
-        mods = "OPT",
+        mods = "META",
         action = wezterm.action.ActivatePaneDirection "Next"
     },
 }
