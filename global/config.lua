@@ -7,10 +7,10 @@ return function(config)
     -- ===================
 
     config.font = wezterm.font_with_fallback {
-        { family = "JetBrains Mono",     weight = "Regular" },
-        { family = "Monaspace Neon Var", weight = "Medium" },
-        { family = "Intel One Mono",     weight = "Regular" },
-        { family = "Geist Mono",         weight = "Medium" },
+        { family = "JetBrains Mono", weight = "Regular" },
+        { family = "Iosevka",        weight = "Medium" },
+        { family = "CommitMono",     weight = "Medium" },
+        { family = "Geist Mono",     weight = "Medium" },
     }
 
     -- ===================
