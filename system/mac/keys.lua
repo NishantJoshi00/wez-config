@@ -32,9 +32,12 @@ local keys = {
         },
     },
     {
-        key = "k",
-        mods = "CMD",
-        action = action.ClearScrollback 'ScrollbackAndViewport',
+        key = 'k',
+        mods = 'CMD',
+        action = action.Multiple {
+            action.ClearScrollback 'ScrollbackAndViewport',
+            action.SendKey { key = 'L', mods = 'CTRL' },
+        },
     },
 
     -- ===================
@@ -133,6 +136,11 @@ local keys = {
         mods = "CMD",
         action = wezterm.action.ActivatePaneDirection "Next"
     },
+    {
+        key = "j",
+        mods = "CMD",
+        action = wezterm.action.TogglePaneZoomState
+    }
 }
 
 return keys
